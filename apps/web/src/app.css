@@ -1,0 +1,51 @@
+@import "tailwindcss";
+/* Only the weight axis: no italic, no width. Self-hosted, so the page makes no
+   external request — 4.7 serves everything from one origin. */
+@import "@fontsource-variable/instrument-sans/wght.css";
+@import "@fontsource-variable/martian-mono/wght.css";
+
+/*
+  One theme, and only one. `corporate` is daisyUI's flattest light theme —
+  square-ish corners, no depth, restrained colour — which is what a tool that
+  reads like the desktop one it replaces wants.
+
+  The rule the theme has to respect: viridis is the only saturated colour that
+  means anything on the page, and it always means a diameter class. 5.1 step 13
+  takes the colour of a skeleton pixel and of a histogram bar from `class_of`,
+  the same function, so the picture and the number cannot disagree about the
+  same pixel. Nothing else on screen may be painted in that green.
+*/
+@plugin "daisyui" {
+  themes: corporate --default;
+}
+
+@theme {
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Martian Mono Variable", ui-monospace, monospace;
+}
+
+/* Every number on screen is a measurement, and a column of measurements that
+   does not align cannot be compared down the page. */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The etched label on a piece of lab equipment, and the typed label on a
+   herbarium sheet. For labels this interface writes — panel names, statuses.
+   Never for data: it upper-cases, and `mm` upper-cased is not a millimetre. */
+@utility plate {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* The same register for text that came from outside — units, file names, API
+   tokens, timestamps — where the casing is not ours to change. */
+@utility datum {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}

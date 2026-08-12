@@ -1,0 +1,26 @@
+[project]
+name = "sabugo-worker"
+version = "0.1.0"
+description = "Root and fiber image analysis pipeline"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  # contrib: Guo-Hall thinning lives in cv2.ximgproc.
+  #
+  # Pinned to a minor, and it is not caution: the thinning, the precise
+  # distance transform and the viridis ramp all come from here, so the library
+  # version is part of what produces the numbers. The golden tests assert exact
+  # pixel counts, and `PIPELINE_VERSION` rises whenever output values
+  # move — a silent bump underneath would move them without anyone raising it.
+  "opencv-contrib-python-headless>=5.0,<5.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    env_file:
+      - ../.env
+    environment:
+      NODE_ENV: production
+      WEB_DIST: /app/apps/web/dist
+      PYTHON_BIN: /opt/venv/bin/python
+      WORKER_CWD: /app/apps/worker
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test:
+        - CMD
+        - bun
+        - -e
+        - 'if (!(await fetch("http://127.0.0.1:3000/api/health")).ok) process.exit(1)'
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
