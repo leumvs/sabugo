@@ -49,6 +49,7 @@ export const session = $state({
   rotation: 0,
   rows: [],
   docks: { options: true, rois: true, bottom: true },
+  resultIndex: 0,
 });
 
 /** Only DPI travels; pixels per mm is converted here. */
@@ -118,9 +119,13 @@ export function setMouseMode(mode) {
   if (mode === "roi") session.display = "input";
 }
 
-export function shown() {
+export function currentEntry() {
   const run = currentRun();
-  const entry = run?.result?.results?.[0];
+  return run?.result?.results?.[session.resultIndex] ?? null;
+}
+
+export function shown() {
+  const entry = currentEntry();
   if (session.display === "segmented") return entry?.segmentedImage ?? null;
   if (session.display === "processed") return entry?.skeletonImage ?? null;
   return session.imageUrl;
@@ -145,6 +150,7 @@ export async function measure({ preview = false } = {}) {
     log: [],
   });
   session.selected = 0;
+  session.resultIndex = 0;
   // Read it back out of the array: `session` is deeply reactive, so the proxy
   // is what notifies. Mutating the object we just built would write through to
   // the same data and update nothing on screen.

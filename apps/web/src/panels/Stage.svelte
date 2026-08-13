@@ -4,7 +4,14 @@ import logo from "../assets/sabugo.svg";
 import { t } from "../lib/i18n.svelte.js";
 import { classLabels } from "../lib/metrics.js";
 import { rectFrom, toImagePoint, toPercent } from "../lib/roi.js";
-import { addRoi, chooseFile, currentRun, session, shown } from "../lib/state.svelte.js";
+import {
+  addRoi,
+  chooseFile,
+  currentEntry,
+  currentRun,
+  session,
+  shown,
+} from "../lib/state.svelte.js";
 import Histogram from "./Histogram.svelte";
 
 let dragging = $state(false);
@@ -27,7 +34,8 @@ const run = $derived(currentRun());
 // lines up with the input.
 const drawable = $derived(session.display === "input" && session.mouseMode === "roi");
 
-const entry = $derived(session.display === "processed" ? run?.result?.results?.[0] : null);
+const entry = $derived(session.display === "processed" ? currentEntry() : null);
+const results = $derived(run?.result?.results ?? []);
 
 /** A scan far taller than the pane fills the width and scrolls instead:
  *  fitting its height leaves a sliver where a 3 px medial axis is invisible. */
@@ -168,6 +176,20 @@ function endPan() {
             unit="mm"
           />
         </div>
+        {#if results.length > 1}
+          <div class="flex flex-wrap gap-1 px-4 pb-2">
+            {#each results as result, index (result.roiName)}
+              <button
+                type="button"
+                class="btn btn-xs"
+                class:btn-primary={index === session.resultIndex}
+                onclick={() => (session.resultIndex = index)}
+              >
+                {result.roiName}
+              </button>
+            {/each}
+          </div>
+        {/if}
       </details>
     {/if}
 
