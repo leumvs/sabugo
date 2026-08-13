@@ -11,13 +11,13 @@ services:
       PYTHON_BIN: /opt/venv/bin/python
       WORKER_CWD: /app/apps/worker
     ports:
-      - "3000:3000"
+      - "${PORT}:${PORT}"
     healthcheck:
       test:
         - CMD
         - bun
         - -e
-        - 'if (!(await fetch("http://127.0.0.1:3000/api/health")).ok) process.exit(1)'
+        - 'if (!(await fetch(`http://127.0.0.1:$${process.env.PORT}/api/health`)).ok) process.exit(1)'
       interval: 10s
       timeout: 5s
       retries: 5

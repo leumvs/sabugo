@@ -12,7 +12,10 @@
     "start": "bun run --filter '@sabugo/api' --env-file .env start",
     "test": "bun test",
     "check": "biome check . && bun run --filter '@sabugo/api' typecheck",
-    "format": "biome check --write ."
+    "format": "biome check --write .",
+    "compose:up": "docker compose -f infra/docker-compose.yml --env-file .env up -d --build",
+    "compose:down": "docker compose -f infra/docker-compose.yml --env-file .env down -v",
+    "compose:logs": "docker compose -f infra/docker-compose.yml --env-file .env logs --no-color"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.7"

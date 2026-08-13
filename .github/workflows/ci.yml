@@ -69,31 +69,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
       - name: prepare .env
         run: cp .env.example .env
 
       - name: compose up
-        working-directory: infra
-        run: docker compose up -d --build --wait
+        run: bun run compose:up -- --wait
 
       - name: check /api/health
         run: |
           set -euo pipefail
-          res=$(curl -fsS http://localhost:3000/api/health)
+          source .env
+          res=$(curl -fsS "http://localhost:${PORT}/api/health")
           echo "$res"
           test "$res" = '{"status":"ok"}'
 
       - name: check the client is served
         run: |
           set -euo pipefail
-          curl -fsS http://localhost:3000/ | grep -q '<div id="app">'
+          source .env
+          curl -fsS "http://localhost:${PORT}/" | grep -q '<div id="app">'
 
       - name: log on failure
         if: failure()
-        working-directory: infra
-        run: docker compose logs --no-color
+        run: bun run compose:logs
 
       - name: compose down
         if: always()
-        working-directory: infra
-        run: docker compose down -v
+        run: bun run compose:down

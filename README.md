@@ -140,10 +140,9 @@ The two test suites are separate and neither runs the other. Everything about th
 One Docker Compose service. No database, no Redis, no volume, no state: `docker compose down -v` loses nothing, because there is nothing to lose. The API serves the client's static build alongside `/api/*`, and the Python worker runs as a subprocess inside the same container, so the image carries both Bun and Python.
 
 ```bash
-cp .env.example .env    # set the limits if the defaults do not fit
-cd infra                # the Compose file lives here; its build context is the repo root
-docker compose up -d --build
-curl http://localhost:3000/api/health
+cp .env.example .env    # set the limits, and the port, if the defaults do not fit
+bun run compose:up      # docker compose -f infra/docker-compose.yml --env-file .env up -d --build
+curl http://localhost:${PORT:-3000}/api/health
 ```
 
 `apps/api/src/lib/env.ts` validates the configuration at startup and fails naming the variable: a misconfigured container should die at `docker compose up`, not half an hour later on the first upload. Two constraints that are not preference:
