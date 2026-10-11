@@ -136,31 +136,15 @@ The pipeline, its provenance, numerical validation, and tests are documented in 
 
 ## Production
 
-One Compose service serves the frontend build and the API. Each analysis runs in an internal Python process with a timeout; no separate worker, database, or Redis is needed. Jobs are temporary, and results expire five minutes after completion. Restarting the service clears them.
+Pull the image from GHCR and run it:
 
 ```bash
-docker compose -f infra/docker-compose.yml --env-file .env up -d --build
-curl http://localhost:${PORT:-3000}/api/health
+docker pull ghcr.io/leumvs/sabugo:latest
+docker run -d --name sabugo --restart unless-stopped -p 3000:3000 ghcr.io/leumvs/sabugo:latest
 ```
 
-The runtime image is Python 3.14 on Debian with dependencies installed by uv 0.13.0 using `uv sync --locked --no-dev`. Bun is used only to build the frontend. The container runs as a non-root user and starts one Uvicorn process, because queue and results are in memory.
-
-`api/settings.py` validates configuration at startup. Compose overrides `FASTAPI_ENV` and `WEB_DIST` for production. Configure the port, megapixel ceiling, queue depth, timeout, and upload rate in `.env`.
-
-Compose limits the service to 2 CPUs and 4 GiB, with two OpenCV threads. The default image ceiling is 50 MP; existing `.env` files with `MAX_MEGAPIXELS=100` keep that override and should be adjusted to the chosen memory budget. The [performance report](api/benchmarks/README.md) includes reproducible comparisons and memory checks.
-
-The TLS proxy should support HTTP/2 and avoid buffering SSE. FastAPI supplies SSE keep-alive comments and `X-Accel-Buffering: no`.
-
-Set `FORWARDED_ALLOW_IPS` to the IP addresses or CIDRs of trusted proxies that connect directly to Uvicorn. Uvicorn then supplies the real client address for rate limiting; forwarding headers from other clients are ignored. In Compose, use the proxy's container/network address rather than assuming it connects from loopback.
-
-Without Compose, build the frontend and start the production API:
-
-```bash
-bun run --cwd web build
-FASTAPI_ENV=production uv run --directory api --env-file ../.env uvicorn main:app --host 0.0.0.0 --port 3000
-```
-
-Set `--port` to the same value as `PORT` in `.env`.
+Open [http://localhost:3000](http://localhost:3000). The image includes the frontend
+and API, configured for production.
 
 ## Licence
 

@@ -1,0 +1,29 @@
+name: CD
+on:
+  workflow_run:
+    workflows: [CI]
+    branches: [main]
+    types: [completed]
+jobs:
+  publish:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: infra/Dockerfile
+          push: true
+          tags: ghcr.io/leumvs/sabugo:latest
+          labels: org.opencontainers.image.source=https://github.com/leumvs/sabugo
