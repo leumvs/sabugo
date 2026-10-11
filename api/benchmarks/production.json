@@ -1,0 +1,36 @@
+{
+  "container": "aab347d0c99317cdc46934e4c2ab7aaf69fbbed8ad576b325a671223744b2549",
+  "affinity": [
+    10,
+    11
+  ],
+  "cases": [
+    {
+      "mode": "broken_roots",
+      "preview": false,
+      "megapixels": 49.999041,
+      "elapsed_s": 7.630205952998949
+    },
+    {
+      "mode": "whole_root",
+      "preview": false,
+      "megapixels": 49.999041,
+      "elapsed_s": 7.699570083001163
+    },
+    {
+      "mode": "whole_root",
+      "preview": true,
+      "megapixels": 49.999041,
+      "elapsed_s": 1.0737478810042376
+    }
+  ],
+  "health_samples": 163,
+  "health_p95_ms": 2.650028000061866,
+  "uploads": [],
+  "cgroup": {
+    "memory.max": "4294967296",
+    "memory.swap.max": "0",
+    "cpu.max": "200000 100000",
+    "memory.peak": "1924030464"
+  }
+}

@@ -1,0 +1,3224 @@
+{
+  "python": "3.14.8",
+  "cpus": 2,
+  "repeats": 10,
+  "source_sha256": "c553a794ca5e8cc30663d019023b91e085963b374885b3192fe8bca80e4499bb",
+  "scenarios": {
+    "1mp/broken_roots/plain": {
+      "median_s": 0.3247302914969623,
+      "samples_s": [
+        0.34484153099765535,
+        0.32353532100387383,
+        0.3258854349987814,
+        0.3212326990033034,
+        0.31914847400184954,
+        0.33126009500119835,
+        0.32779758799733827,
+        0.3235751479951432,
+        0.3270863459983957,
+        0.31905996500427136
+      ],
+      "startup_s": 0.1309073869997519,
+      "child_peak_mb": 90.3125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.00320141499832971,
+        "segment": 0.012400628998875618,
+        "skeletonize": 0.0504418229975272,
+        "topology": 0.059483224500581855,
+        "aggregate": 0.032663333498931024,
+        "render": 0.028171756501251366
+      },
+      "result_bytes": 74017,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 230,
+            "metrics": {
+              "numRootTips": 106.0,
+              "numBranchPoints": 88.0,
+              "totalRootLength": 598.7154136491159,
+              "branchingFrequency": 0.14698135039425161,
+              "networkArea": 206.3365048888889,
+              "averageDiameter": 0.36028303657095445,
+              "medianDiameter": 0.3490896011988322,
+              "maxDiameter": 0.508,
+              "perimeter": 1225.6068794819514,
+              "volume": 63.82442893104453,
+              "surfaceArea": 677.6635493715015
+            },
+            "bins": {
+              "rootLength": [
+                598.7154136491159,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                215.70700727133155,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                677.6635493715015,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                63.82442893104453,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                968,
+                971,
+                3
+              ],
+              "sha256": "6d8ffbdc6fb0d9fcb06e63af1cdf5496be68aa3f63ef82732d6af9c7a97715e5"
+            },
+            "skeletonImage": {
+              "shape": [
+                968,
+                971,
+                3
+              ],
+              "sha256": "9e1b0b9e4459430b775a345ee4a98b48ca88613bbd04c22dddf0edb43281e39a"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Number.of.Root.Tips": "106.000000",
+            "Number.of.Branch.Points": "88.000000",
+            "Total.Root.Length.mm": "598.715414",
+            "Branching.frequency.per.mm": "0.146981",
+            "Network.Area.mm2": "206.336505",
+            "Average.Diameter.mm": "0.360283",
+            "Median.Diameter.mm": "0.349090",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "1225.606879",
+            "Volume.mm3": "63.824429",
+            "Surface.Area.mm2": "677.663549",
+            "Root.Length.Diameter.Range.1.mm": "598.715414",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "215.707007",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "677.663549",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "63.824429",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "1mp/broken_roots/preview": {
+      "median_s": 0.1652575030020671,
+      "samples_s": [
+        0.165117229000316,
+        0.16155793899815762,
+        0.1653977770038182,
+        0.1650748379979632,
+        0.16114907500013942,
+        0.1676548429968534,
+        0.1619139910035301,
+        0.16726414400181966,
+        0.16927387499890756,
+        0.16867292400274891
+      ],
+      "startup_s": 0.13177252999958,
+      "child_peak_mb": 79.61328125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.003191586001776159,
+        "segment": 0.012661457996728132,
+        "render": 0.011848941503558308
+      },
+      "result_bytes": 25346,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "segmentedImage": {
+              "shape": [
+                968,
+                971,
+                3
+              ],
+              "sha256": "6d8ffbdc6fb0d9fcb06e63af1cdf5496be68aa3f63ef82732d6af9c7a97715e5"
+            },
+            "skeletonImage": null
+          }
+        ],
+        "csv": []
+      }
+    },
+    "1mp/broken_roots/pruned": {
+      "median_s": 0.48011723899981007,
+      "samples_s": [
+        0.4848174519938766,
+        0.4906187980013783,
+        0.47592951899423497,
+        0.47419193999667186,
+        0.47996304799744394,
+        0.4802714300021762,
+        0.4713158169979579,
+        0.47358268199604936,
+        0.48645566000050167,
+        0.4886366800055839
+      ],
+      "startup_s": 0.13085972100088838,
+      "child_peak_mb": 94.53125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.0031996969992178492,
+        "segment": 0.012160157501057256,
+        "skeletonize": 0.04783646549913101,
+        "prune": 0.17044401199746062,
+        "topology": 0.05003872599991155,
+        "aggregate": 0.02941927699794178,
+        "render": 0.02779007999924943
+      },
+      "result_bytes": 73484,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 14,
+            "metrics": {
+              "numRootTips": 28.0,
+              "numBranchPoints": 0.0,
+              "totalRootLength": 585.3878093692305,
+              "branchingFrequency": 0.0,
+              "networkArea": 206.3365048888889,
+              "averageDiameter": 0.3640777928425048,
+              "medianDiameter": 0.3490896011988322,
+              "maxDiameter": 0.508,
+              "perimeter": 1225.6068794819514,
+              "volume": 63.38460833215172,
+              "surfaceArea": 669.5572800054692
+            },
+            "bins": {
+              "rootLength": [
+                585.3878093692305,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                213.1267015920529,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                669.5572800054692,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                63.38460833215172,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                968,
+                971,
+                3
+              ],
+              "sha256": "6d8ffbdc6fb0d9fcb06e63af1cdf5496be68aa3f63ef82732d6af9c7a97715e5"
+            },
+            "skeletonImage": {
+              "shape": [
+                968,
+                971,
+                3
+              ],
+              "sha256": "890b995a19096044782f0a862c0ba3ec11268e7d1c14789f7e4ac1c8fd756bef"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Number.of.Root.Tips": "28.000000",
+            "Number.of.Branch.Points": "0.000000",
+            "Total.Root.Length.mm": "585.387809",
+            "Branching.frequency.per.mm": "0.000000",
+            "Network.Area.mm2": "206.336505",
+            "Average.Diameter.mm": "0.364078",
+            "Median.Diameter.mm": "0.349090",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "1225.606879",
+            "Volume.mm3": "63.384608",
+            "Surface.Area.mm2": "669.557280",
+            "Root.Length.Diameter.Range.1.mm": "585.387809",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "213.126702",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "669.557280",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "63.384608",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "1mp/broken_roots/rois": {
+      "median_s": 0.3206113930027641,
+      "samples_s": [
+        0.3248373160022311,
+        0.3253529949943186,
+        0.31536885099922074,
+        0.31046253900422016,
+        0.31732757500139996,
+        0.3431681740039494,
+        0.31783051900129067,
+        0.3233922670042375,
+        0.3119088009989355,
+        0.32539964400348254
+      ],
+      "startup_s": 0.1316632660018513,
+      "child_peak_mb": 83.6796875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.0031554774977848865,
+        "segment": 0.012016607499390375,
+        "skeletonize": 0.04759695000393549,
+        "topology": 0.05832001100498019,
+        "aggregate": 0.03349351499855402,
+        "render": 0.02796762999787461
+      },
+      "result_bytes": 75212,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": 0,
+            "roiName": "roi-0",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 121,
+            "metrics": {
+              "numRootTips": 55.0,
+              "numBranchPoints": 45.0,
+              "totalRootLength": 301.37964657254804,
+              "branchingFrequency": 0.14931333456576873,
+              "networkArea": 100.34567744444445,
+              "averageDiameter": 0.34823755921712124,
+              "medianDiameter": 0.33866666666666667,
+              "maxDiameter": 0.508,
+              "perimeter": 616.3739662485123,
+              "volume": 30.236738174392006,
+              "surfaceArea": 329.7155290349444
+            },
+            "bins": {
+              "rootLength": [
+                301.37964657254804,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                104.95171252014207,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                329.7155290349444,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                30.236738174392006,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                483,
+                971,
+                3
+              ],
+              "sha256": "1241d4a5f93fa5efb1b9b0b89ebbb18f6f56e29fb7eb54bf9c25842f60b49ef9"
+            },
+            "skeletonImage": {
+              "shape": [
+                483,
+                971,
+                3
+              ],
+              "sha256": "ad1285e7c0386458e824674619aa96b9286568b8b270f32f8ac3e8cd8d4bf625"
+            }
+          },
+          {
+            "roiIndex": 1,
+            "roiName": "roi-1",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 110,
+            "metrics": {
+              "numRootTips": 55.0,
+              "numBranchPoints": 43.0,
+              "totalRootLength": 301.08803764651583,
+              "branchingFrequency": 0.14281537166376226,
+              "networkArea": 105.99082744444443,
+              "averageDiameter": 0.36841766480186716,
+              "medianDiameter": 0.3786408497492472,
+              "maxDiameter": 0.508,
+              "perimeter": 616.6134397409757,
+              "volume": 33.49708003331682,
+              "surfaceArea": 348.484783364398
+            },
+            "bins": {
+              "rootLength": [
+                301.08803764651583,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                110.92615172950745,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                348.484783364398,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                33.49708003331682,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                485,
+                971,
+                3
+              ],
+              "sha256": "2a5b6e0b76c84724529489ce260198496036d228ed5e29df0bd51ce62b6fc391"
+            },
+            "skeletonImage": {
+              "shape": [
+                485,
+                971,
+                3
+              ],
+              "sha256": "08ef9995a81c4dff62bbff50bc589d204687b6d720640c6ee1a47ca822eb6c23"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-0",
+            "Number.of.Root.Tips": "55.000000",
+            "Number.of.Branch.Points": "45.000000",
+            "Total.Root.Length.mm": "301.379647",
+            "Branching.frequency.per.mm": "0.149313",
+            "Network.Area.mm2": "100.345677",
+            "Average.Diameter.mm": "0.348238",
+            "Median.Diameter.mm": "0.338667",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "616.373966",
+            "Volume.mm3": "30.236738",
+            "Surface.Area.mm2": "329.715529",
+            "Root.Length.Diameter.Range.1.mm": "301.379647",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "104.951713",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "329.715529",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "30.236738",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          },
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-1",
+            "Number.of.Root.Tips": "55.000000",
+            "Number.of.Branch.Points": "43.000000",
+            "Total.Root.Length.mm": "301.088038",
+            "Branching.frequency.per.mm": "0.142815",
+            "Network.Area.mm2": "105.990827",
+            "Average.Diameter.mm": "0.368418",
+            "Median.Diameter.mm": "0.378641",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "616.613440",
+            "Volume.mm3": "33.497080",
+            "Surface.Area.mm2": "348.484783",
+            "Root.Length.Diameter.Range.1.mm": "301.088038",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "110.926152",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "348.484783",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "33.497080",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "1mp/whole_root/plain": {
+      "median_s": 0.43623803700029384,
+      "samples_s": [
+        0.4313094729950535,
+        0.4360532830032753,
+        0.4300705480054603,
+        0.43137883600138593,
+        0.4332649700008915,
+        0.4364227909973124,
+        0.44052213699615095,
+        0.43936742399819195,
+        0.45622311499755597,
+        0.4480171100003645
+      ],
+      "startup_s": 0.13073739700121223,
+      "child_peak_mb": 114.69140625,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.0033366540010320023,
+        "segment": 0.013000458002352389,
+        "skeletonize": 0.11138792100246064,
+        "topology": 0.055079360496165464,
+        "aggregate": 0.08145907800280838,
+        "render": 0.03339666949977982
+      },
+      "result_bytes": 218777,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 382,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 111.0,
+              "totalRootLength": 668.0364720773973,
+              "depth": 41.105666666666664,
+              "maxWidth": 41.105666666666664,
+              "widthToDepthRatio": 1.0,
+              "networkArea": 275.39013022222224,
+              "convexArea": 1686.1507495555554,
+              "solidity": 0.16332473848783155,
+              "lowerRootArea": 138.98896933333333,
+              "averageDiameter": 0.47056282685284695,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 2.839806312561035,
+              "perimeter": 1279.1075658745765,
+              "volume": 144.01707295987848,
+              "surfaceArea": 987.5694861705912,
+              "holes": 36.0,
+              "averageHoleSize": 0.004181592592592593,
+              "averageRootOrientation": 44.71615193715952,
+              "shallowAngleFrequency": 0.2746378072154003,
+              "mediumAngleFrequency": 0.458487886948365,
+              "steepAngleFrequency": 0.26687430583623467
+            },
+            "bins": {
+              "rootLength": [
+                664.1295144975751,
+                3.9069575798222322,
+                0.0
+              ],
+              "projectedArea": [
+                304.8407022775755,
+                9.51242846397116,
+                0.0
+              ],
+              "surfaceArea": [
+                957.685310790381,
+                29.884175380210248,
+                0.0
+              ],
+              "volume": [
+                125.60422319249383,
+                18.41284976738465,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                971,
+                971,
+                3
+              ],
+              "sha256": "6bcfe64c70aedbb59ba85687e82732808757c0ea952587fcbbfafad1f95a0348"
+            },
+            "skeletonImage": {
+              "shape": [
+                971,
+                971,
+                3
+              ],
+              "sha256": "65b474626a34d2d93618602121250d70227423c52b40adedb8c555cd6e1dc9ec"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "111.000000",
+            "Total.Root.Length.mm": "668.036472",
+            "Depth.mm": "41.105667",
+            "Maximum.Width.mm": "41.105667",
+            "Width-to-Depth.Ratio": "1.000000",
+            "Network.Area.mm2": "275.390130",
+            "Convex.Area.mm2": "1686.150750",
+            "Solidity": "0.163325",
+            "Lower.Root.Area.mm2": "138.988969",
+            "Average.Diameter.mm": "0.470563",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "2.839806",
+            "Perimeter.mm": "1279.107566",
+            "Volume.mm3": "144.017073",
+            "Surface.Area.mm2": "987.569486",
+            "Holes": "36.000000",
+            "Average.Hole.Size.mm2": "0.004182",
+            "Average.Root.Orientation.deg": "44.716152",
+            "Shallow.Angle.Frequency": "0.274638",
+            "Medium.Angle.Frequency": "0.458488",
+            "Steep.Angle.Frequency": "0.266874",
+            "Root.Length.Diameter.Range.1.mm": "664.129514",
+            "Root.Length.Diameter.Range.2.mm": "3.906958",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "304.840702",
+            "Projected.Area.Diameter.Range.2.mm2": "9.512428",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "957.685311",
+            "Surface.Area.Diameter.Range.2.mm2": "29.884175",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "125.604223",
+            "Volume.Diameter.Range.2.mm3": "18.412850",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "1mp/whole_root/preview": {
+      "median_s": 0.16713526649982668,
+      "samples_s": [
+        0.1721293570008129,
+        0.16328619999694638,
+        0.16625522999675013,
+        0.16688602900103433,
+        0.16370145700057037,
+        0.16684598199935863,
+        0.16851961000065785,
+        0.16838380900298944,
+        0.16738450399861904,
+        0.17047379400173668
+      ],
+      "startup_s": 0.130789310002001,
+      "child_peak_mb": 80.3203125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.0033313489984720945,
+        "segment": 0.013186048996431055,
+        "render": 0.013368413001444424
+      },
+      "result_bytes": 67898,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "segmentedImage": {
+              "shape": [
+                971,
+                971,
+                3
+              ],
+              "sha256": "6bcfe64c70aedbb59ba85687e82732808757c0ea952587fcbbfafad1f95a0348"
+            },
+            "skeletonImage": null
+          }
+        ],
+        "csv": []
+      }
+    },
+    "1mp/whole_root/pruned": {
+      "median_s": 0.5959695454985194,
+      "samples_s": [
+        0.5960736249980982,
+        0.6012667470058659,
+        0.6022557420001249,
+        0.5958654659989406,
+        0.6038918369958992,
+        0.5896854739985429,
+        0.599564203999762,
+        0.5953603980015032,
+        0.5944929149991367,
+        0.5901504740031669
+      ],
+      "startup_s": 0.13096529799804557,
+      "child_peak_mb": 114.79296875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.003350700997543754,
+        "segment": 0.012555745997815393,
+        "skeletonize": 0.11110653699870454,
+        "prune": 0.17208825350098778,
+        "topology": 0.04987941050421796,
+        "aggregate": 0.07409985000049346,
+        "render": 0.03312359049959923
+      },
+      "result_bytes": 218137,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 149,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 28.0,
+              "totalRootLength": 651.0115885227708,
+              "depth": 41.105666666666664,
+              "maxWidth": 41.105666666666664,
+              "widthToDepthRatio": 1.0,
+              "networkArea": 275.39013022222224,
+              "convexArea": 1686.1507495555554,
+              "solidity": 0.16332473848783155,
+              "lowerRootArea": 138.98896933333333,
+              "averageDiameter": 0.4772279881403478,
+              "medianDiameter": 0.4559439477920532,
+              "maxDiameter": 2.839806312561035,
+              "perimeter": 1279.1075658745765,
+              "volume": 143.25739561167663,
+              "surfaceArea": 976.032992162192,
+              "holes": 36.0,
+              "averageHoleSize": 0.004181592592592593,
+              "averageRootOrientation": 44.79294416039989,
+              "shallowAngleFrequency": 0.27003257156077964,
+              "mediumAngleFrequency": 0.4647159531930814,
+              "steepAngleFrequency": 0.2652514752461389
+            },
+            "bins": {
+              "rootLength": [
+                647.1046309429486,
+                3.9069575798222322,
+                0.0
+              ],
+              "projectedArea": [
+                301.1685221828091,
+                9.51242846397116,
+                0.0
+              ],
+              "surfaceArea": [
+                946.1488167819818,
+                29.884175380210248,
+                0.0
+              ],
+              "volume": [
+                124.84454584429199,
+                18.41284976738465,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                971,
+                971,
+                3
+              ],
+              "sha256": "6bcfe64c70aedbb59ba85687e82732808757c0ea952587fcbbfafad1f95a0348"
+            },
+            "skeletonImage": {
+              "shape": [
+                971,
+                971,
+                3
+              ],
+              "sha256": "1f7af3f171cde153947189f1780f74a80f7a4be2c714c4084e392d434c940866"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "28.000000",
+            "Total.Root.Length.mm": "651.011589",
+            "Depth.mm": "41.105667",
+            "Maximum.Width.mm": "41.105667",
+            "Width-to-Depth.Ratio": "1.000000",
+            "Network.Area.mm2": "275.390130",
+            "Convex.Area.mm2": "1686.150750",
+            "Solidity": "0.163325",
+            "Lower.Root.Area.mm2": "138.988969",
+            "Average.Diameter.mm": "0.477228",
+            "Median.Diameter.mm": "0.455944",
+            "Maximum.Diameter.mm": "2.839806",
+            "Perimeter.mm": "1279.107566",
+            "Volume.mm3": "143.257396",
+            "Surface.Area.mm2": "976.032992",
+            "Holes": "36.000000",
+            "Average.Hole.Size.mm2": "0.004182",
+            "Average.Root.Orientation.deg": "44.792944",
+            "Shallow.Angle.Frequency": "0.270033",
+            "Medium.Angle.Frequency": "0.464716",
+            "Steep.Angle.Frequency": "0.265251",
+            "Root.Length.Diameter.Range.1.mm": "647.104631",
+            "Root.Length.Diameter.Range.2.mm": "3.906958",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "301.168522",
+            "Projected.Area.Diameter.Range.2.mm2": "9.512428",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "946.148817",
+            "Surface.Area.Diameter.Range.2.mm2": "29.884175",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "124.844546",
+            "Volume.Diameter.Range.2.mm3": "18.412850",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "1mp/whole_root/rois": {
+      "median_s": 0.42507868699976825,
+      "samples_s": [
+        0.42718992799927946,
+        0.43201654700533254,
+        0.4165749859967036,
+        0.42472048600029666,
+        0.42394121200049995,
+        0.4240888749991427,
+        0.42543688799923984,
+        0.4224608860022272,
+        0.4358447639970109,
+        0.43041700100002345
+      ],
+      "startup_s": 0.13188907850417309,
+      "child_peak_mb": 98.29296875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.003559295499144355,
+        "segment": 0.011228723000385799,
+        "skeletonize": 0.10522718500214978,
+        "topology": 0.05398272350066691,
+        "aggregate": 0.08148681050442974,
+        "render": 0.032316794498910895
+      },
+      "result_bytes": 219638,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": 0,
+            "roiName": "roi-0",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 195,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 56.0,
+              "totalRootLength": 332.845075185743,
+              "depth": 20.531666666666666,
+              "maxWidth": 41.105666666666664,
+              "widthToDepthRatio": 2.002061855670103,
+              "networkArea": 137.61621222222223,
+              "convexArea": 789.7161625,
+              "solidity": 0.17426034663716564,
+              "lowerRootArea": 7.449805888888889,
+              "averageDiameter": 0.4573251478508394,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 1.796051223754883,
+              "perimeter": 642.2280461910566,
+              "volume": 62.15861213734113,
+              "surfaceArea": 478.20828013129716,
+              "holes": 18.0,
+              "averageHoleSize": 0.004181592592592593,
+              "averageRootOrientation": 44.596462900072396,
+              "shallowAngleFrequency": 0.2751863705233315,
+              "mediumAngleFrequency": 0.45972291119652686,
+              "steepAngleFrequency": 0.2650907182801417
+            },
+            "bins": {
+              "rootLength": [
+                332.845075185743,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                152.21842322074494,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                478.20828013129716,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                62.15861213734113,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                485,
+                971,
+                3
+              ],
+              "sha256": "50675a20a119aec6801ef53a94c57750766dc88bbbf52024d0bf8024556701b5"
+            },
+            "skeletonImage": {
+              "shape": [
+                485,
+                971,
+                3
+              ],
+              "sha256": "cc70a904af64ce27eb333bfd1deb924236b7b769c14f7c03a78511177dc88c72"
+            }
+          },
+          {
+            "roiIndex": 1,
+            "roiName": "roi-1",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 183,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 56.0,
+              "totalRootLength": 332.3485316286656,
+              "depth": 20.574,
+              "maxWidth": 41.105666666666664,
+              "widthToDepthRatio": 1.9979423868312758,
+              "networkArea": 137.773918,
+              "convexArea": 789.8711801111111,
+              "solidity": 0.17442580697857513,
+              "lowerRootArea": 131.10188833333333,
+              "averageDiameter": 0.46115749256826355,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 1.8626666666666667,
+              "perimeter": 642.2631162706216,
+              "volume": 63.59395099651039,
+              "surfaceArea": 481.49624676160744,
+              "holes": 18.0,
+              "averageHoleSize": 0.004181592592592593,
+              "averageRootOrientation": 44.54944269172046,
+              "shallowAngleFrequency": 0.2791816305961791,
+              "mediumAngleFrequency": 0.45422400334366125,
+              "steepAngleFrequency": 0.2665943660601597
+            },
+            "bins": {
+              "rootLength": [
+                332.3485316286656,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                153.26501550461464,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                481.49624676160744,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                63.59395099651039,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                486,
+                971,
+                3
+              ],
+              "sha256": "178522255b89a407b8b429725de7fca64a7f854bb88d89444d647aa4f954aef7"
+            },
+            "skeletonImage": {
+              "shape": [
+                486,
+                971,
+                3
+              ],
+              "sha256": "ba5e1e320d53dd92ab5ea021d60acd5c3ea075fc38edf5655483371e0f73f210"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-0",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "56.000000",
+            "Total.Root.Length.mm": "332.845075",
+            "Depth.mm": "20.531667",
+            "Maximum.Width.mm": "41.105667",
+            "Width-to-Depth.Ratio": "2.002062",
+            "Network.Area.mm2": "137.616212",
+            "Convex.Area.mm2": "789.716162",
+            "Solidity": "0.174260",
+            "Lower.Root.Area.mm2": "7.449806",
+            "Average.Diameter.mm": "0.457325",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "1.796051",
+            "Perimeter.mm": "642.228046",
+            "Volume.mm3": "62.158612",
+            "Surface.Area.mm2": "478.208280",
+            "Holes": "18.000000",
+            "Average.Hole.Size.mm2": "0.004182",
+            "Average.Root.Orientation.deg": "44.596463",
+            "Shallow.Angle.Frequency": "0.275186",
+            "Medium.Angle.Frequency": "0.459723",
+            "Steep.Angle.Frequency": "0.265091",
+            "Root.Length.Diameter.Range.1.mm": "332.845075",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "152.218423",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "478.208280",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "62.158612",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          },
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-1",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "56.000000",
+            "Total.Root.Length.mm": "332.348532",
+            "Depth.mm": "20.574000",
+            "Maximum.Width.mm": "41.105667",
+            "Width-to-Depth.Ratio": "1.997942",
+            "Network.Area.mm2": "137.773918",
+            "Convex.Area.mm2": "789.871180",
+            "Solidity": "0.174426",
+            "Lower.Root.Area.mm2": "131.101888",
+            "Average.Diameter.mm": "0.461157",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "1.862667",
+            "Perimeter.mm": "642.263116",
+            "Volume.mm3": "63.593951",
+            "Surface.Area.mm2": "481.496247",
+            "Holes": "18.000000",
+            "Average.Hole.Size.mm2": "0.004182",
+            "Average.Root.Orientation.deg": "44.549443",
+            "Shallow.Angle.Frequency": "0.279182",
+            "Medium.Angle.Frequency": "0.454224",
+            "Steep.Angle.Frequency": "0.266594",
+            "Root.Length.Diameter.Range.1.mm": "332.348532",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "153.265016",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "481.496247",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "63.593951",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "5mp/broken_roots/plain": {
+      "median_s": 0.8695921469989116,
+      "samples_s": [
+        0.8784904000058305,
+        0.8665299999993294,
+        0.878915715002222,
+        0.8627441040007398,
+        0.8761286740045762,
+        0.8676145569988876,
+        0.8575865109960432,
+        0.860282035995624,
+        0.8795760500070173,
+        0.8715697369989357
+      ],
+      "startup_s": 0.13208978800321347,
+      "child_peak_mb": 174.63671875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.013013433002925012,
+        "segment": 0.04543769900192274,
+        "skeletonize": 0.2996371890003502,
+        "topology": 0.18487338349950733,
+        "aggregate": 0.06290273749982589,
+        "render": 0.123298270500527
+      },
+      "result_bytes": 123991,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 92,
+            "metrics": {
+              "numRootTips": 78.0,
+              "numBranchPoints": 28.0,
+              "totalRootLength": 1314.2313733736062,
+              "branchingFrequency": 0.021305228719448805,
+              "networkArea": 464.5582106666667,
+              "averageDiameter": 0.3777001195349735,
+              "medianDiameter": 0.3490896011988322,
+              "maxDiameter": 0.508,
+              "perimeter": 2690.6788794819513,
+              "volume": 151.96578377502007,
+              "surfaceArea": 1559.4405589187184
+            },
+            "bins": {
+              "rootLength": [
+                1314.2313733736062,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                496.38534681970964,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                1559.4405589187184,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                151.96578377502007,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2204,
+                2207,
+                3
+              ],
+              "sha256": "5d79e3774f5a4487f1d3f6824d8d22f460588af437344b77694672e23f8a418d"
+            },
+            "skeletonImage": {
+              "shape": [
+                2204,
+                2207,
+                3
+              ],
+              "sha256": "b2257b1040d4c774f5e0902bb0789b8b100cd484e0f5c322d7df0f4eaa5c7159"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Number.of.Root.Tips": "78.000000",
+            "Number.of.Branch.Points": "28.000000",
+            "Total.Root.Length.mm": "1314.231373",
+            "Branching.frequency.per.mm": "0.021305",
+            "Network.Area.mm2": "464.558211",
+            "Average.Diameter.mm": "0.377700",
+            "Median.Diameter.mm": "0.349090",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "2690.678879",
+            "Volume.mm3": "151.965784",
+            "Surface.Area.mm2": "1559.440559",
+            "Root.Length.Diameter.Range.1.mm": "1314.231373",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "496.385347",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "1559.440559",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "151.965784",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "5mp/broken_roots/preview": {
+      "median_s": 0.23088428100163583,
+      "samples_s": [
+        0.23271946800377918,
+        0.22701546699681785,
+        0.22800597499735886,
+        0.2352586330016493,
+        0.22828995999589097,
+        0.23332078000385081,
+        0.22904909399949247,
+        0.2367897170042852,
+        0.22819926600641338,
+        0.2450066239980515
+      ],
+      "startup_s": 0.1308229755013599,
+      "child_peak_mb": 114.7734375,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.012940042499394622,
+        "segment": 0.03921708249981748,
+        "render": 0.04278100249939598
+      },
+      "result_bytes": 48786,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "segmentedImage": {
+              "shape": [
+                2204,
+                2207,
+                3
+              ],
+              "sha256": "5d79e3774f5a4487f1d3f6824d8d22f460588af437344b77694672e23f8a418d"
+            },
+            "skeletonImage": null
+          }
+        ],
+        "csv": []
+      }
+    },
+    "5mp/broken_roots/pruned": {
+      "median_s": 1.2547102565004025,
+      "samples_s": [
+        1.2950766970025143,
+        1.2454100189934252,
+        1.241810722000082,
+        1.2785237960051745,
+        1.2638512989942683,
+        1.262275048000447,
+        1.2839829079966876,
+        1.247145465000358,
+        1.2415705320017878,
+        1.2421223589990404
+      ],
+      "startup_s": 0.13363251900227624,
+      "child_peak_mb": 197.6875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.012998974998481572,
+        "segment": 0.04652884449751582,
+        "skeletonize": 0.3044403589992726,
+        "prune": 0.37584153200441506,
+        "topology": 0.18779622500005644,
+        "aggregate": 0.06178002149681561,
+        "render": 0.12479102599900216
+      },
+      "result_bytes": 123358,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 14,
+            "metrics": {
+              "numRootTips": 28.0,
+              "numBranchPoints": 0.0,
+              "totalRootLength": 1304.8665486307127,
+              "branchingFrequency": 0.0,
+              "networkArea": 464.5582106666667,
+              "averageDiameter": 0.37912401994925554,
+              "medianDiameter": 0.3490896011988322,
+              "maxDiameter": 0.508,
+              "perimeter": 2690.6788794819513,
+              "volume": 151.69238693050076,
+              "surfaceArea": 1554.1655251269774
+            },
+            "bins": {
+              "rootLength": [
+                1304.8665486307127,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                494.70625141404565,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                1554.1655251269774,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                151.69238693050076,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2204,
+                2207,
+                3
+              ],
+              "sha256": "5d79e3774f5a4487f1d3f6824d8d22f460588af437344b77694672e23f8a418d"
+            },
+            "skeletonImage": {
+              "shape": [
+                2204,
+                2207,
+                3
+              ],
+              "sha256": "c56b4d9b4e9d6b70201febd278f0963e0078e9c36c12a260e16ba7d936ce9d6c"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Number.of.Root.Tips": "28.000000",
+            "Number.of.Branch.Points": "0.000000",
+            "Total.Root.Length.mm": "1304.866549",
+            "Branching.frequency.per.mm": "0.000000",
+            "Network.Area.mm2": "464.558211",
+            "Average.Diameter.mm": "0.379124",
+            "Median.Diameter.mm": "0.349090",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "2690.678879",
+            "Volume.mm3": "151.692387",
+            "Surface.Area.mm2": "1554.165525",
+            "Root.Length.Diameter.Range.1.mm": "1304.866549",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "494.706251",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "1554.165525",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "151.692387",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "5mp/broken_roots/rois": {
+      "median_s": 0.74161721049677,
+      "samples_s": [
+        0.8414728319985443,
+        0.7558905980040436,
+        0.7387320260022534,
+        0.7422401289950358,
+        0.7437506639980711,
+        0.7509124969947152,
+        0.7400394819997018,
+        0.7365288940054597,
+        0.7409942919985042,
+        0.7397532830000273
+      ],
+      "startup_s": 0.1312478399995598,
+      "child_peak_mb": 145.6171875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.012961112999619218,
+        "segment": 0.03415429150118143,
+        "skeletonize": 0.21992240799590945,
+        "topology": 0.15284314450036618,
+        "aggregate": 0.06361372050014324,
+        "render": 0.1177489460023935
+      },
+      "result_bytes": 125038,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": 0,
+            "roiName": "roi-0",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 48,
+            "metrics": {
+              "numRootTips": 42.0,
+              "numBranchPoints": 14.0,
+              "totalRootLength": 657.4221117547474,
+              "branchingFrequency": 0.02129529833219654,
+              "networkArea": 224.40456911111113,
+              "averageDiameter": 0.36582737266706805,
+              "medianDiameter": 0.33866666666666667,
+              "maxDiameter": 0.508,
+              "perimeter": 1345.692632915179,
+              "volume": 71.59971603539245,
+              "surfaceArea": 755.5624701447905
+            },
+            "bins": {
+              "rootLength": [
+                657.4221117547474,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                240.50300387648068,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                755.5624701447905,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                71.59971603539245,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                1101,
+                2207,
+                3
+              ],
+              "sha256": "5372812dd397fb6dce5089aaf18e54068e8c6666d3ab8b577dca73ef03116e90"
+            },
+            "skeletonImage": {
+              "shape": [
+                1101,
+                2207,
+                3
+              ],
+              "sha256": "27944926efeba16f51dfc6497f2479bbf420049e5dd27779b30a261106a8ced2"
+            }
+          },
+          {
+            "roiIndex": 1,
+            "roiName": "roi-1",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 45,
+            "metrics": {
+              "numRootTips": 38.0,
+              "numBranchPoints": 14.0,
+              "totalRootLength": 657.1055949518868,
+              "branchingFrequency": 0.021305555922142283,
+              "networkArea": 240.15364155555557,
+              "averageDiameter": 0.38941883888673,
+              "medianDiameter": 0.42333333333333334,
+              "maxDiameter": 0.508,
+              "perimeter": 1345.5438431538741,
+              "volume": 80.35704895757837,
+              "surfaceArea": 803.8999381387231
+            },
+            "bins": {
+              "rootLength": [
+                657.1055949518868,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                255.88929781208608,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                803.8999381387231,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                80.35704895757837,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                1103,
+                2207,
+                3
+              ],
+              "sha256": "375ce577ec36620e66943916f58c2df170caacd73af992b3f97da7a6d8ac8023"
+            },
+            "skeletonImage": {
+              "shape": [
+                1103,
+                2207,
+                3
+              ],
+              "sha256": "942e5fb70df2e713fb6730234a371119a5236f4b3c56bf783442235ecbf64afe"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-0",
+            "Number.of.Root.Tips": "42.000000",
+            "Number.of.Branch.Points": "14.000000",
+            "Total.Root.Length.mm": "657.422112",
+            "Branching.frequency.per.mm": "0.021295",
+            "Network.Area.mm2": "224.404569",
+            "Average.Diameter.mm": "0.365827",
+            "Median.Diameter.mm": "0.338667",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "1345.692633",
+            "Volume.mm3": "71.599716",
+            "Surface.Area.mm2": "755.562470",
+            "Root.Length.Diameter.Range.1.mm": "657.422112",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "240.503004",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "755.562470",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "71.599716",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          },
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-1",
+            "Number.of.Root.Tips": "38.000000",
+            "Number.of.Branch.Points": "14.000000",
+            "Total.Root.Length.mm": "657.105595",
+            "Branching.frequency.per.mm": "0.021306",
+            "Network.Area.mm2": "240.153642",
+            "Average.Diameter.mm": "0.389419",
+            "Median.Diameter.mm": "0.423333",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "1345.543843",
+            "Volume.mm3": "80.357049",
+            "Surface.Area.mm2": "803.899938",
+            "Root.Length.Diameter.Range.1.mm": "657.105595",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "255.889298",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "803.899938",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "80.357049",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "5mp/whole_root/plain": {
+      "median_s": 1.2882829579975805,
+      "samples_s": [
+        1.3389183519975631,
+        1.2771487909994903,
+        1.2826488110003993,
+        1.283056372005376,
+        1.2783612249986618,
+        1.3018059019959765,
+        1.3104688239982352,
+        1.2857908819933073,
+        1.2907750340018538,
+        1.308186119000311
+      ],
+      "startup_s": 0.13335494700004347,
+      "child_peak_mb": 323.734375,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.01361436449951725,
+        "segment": 0.03716741000243928,
+        "skeletonize": 0.5748997535010858,
+        "topology": 0.18770404349561431,
+        "aggregate": 0.18975787450108328,
+        "render": 0.14379916699544992
+      },
+      "result_bytes": 564631,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 394,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 111.0,
+              "totalRootLength": 1529.444734487215,
+              "depth": 93.42966666666666,
+              "maxWidth": 93.42966666666666,
+              "widthToDepthRatio": 1.0,
+              "networkArea": 643.837422,
+              "convexArea": 8721.147432222222,
+              "solidity": 0.07382485240659953,
+              "lowerRootArea": 323.2592101111111,
+              "averageDiameter": 0.4546548858660521,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 2.839806312561035,
+              "perimeter": 3054.327315418879,
+              "volume": 279.2358146924147,
+              "surfaceArea": 2184.567779321746,
+              "holes": 39.0,
+              "averageHoleSize": 0.004411350427350427,
+              "averageRootOrientation": 44.94433342372285,
+              "shallowAngleFrequency": 0.26769078598639895,
+              "mediumAngleFrequency": 0.4662912393906467,
+              "steepAngleFrequency": 0.26601797462295435
+            },
+            "bins": {
+              "rootLength": [
+                1525.4621951274466,
+                3.9825393597685137,
+                0.0
+              ],
+              "projectedArea": [
+                685.6982151500957,
+                9.671306046776841,
+                0.0
+              ],
+              "surfaceArea": [
+                2154.1844752945735,
+                30.383304027172677,
+                0.0
+              ],
+              "volume": [
+                260.5608677764586,
+                18.674946915956042,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2207,
+                2207,
+                3
+              ],
+              "sha256": "5454ed9f4faa6481db20bb3023c17e1f8309345dfdc7359616c887977341b909"
+            },
+            "skeletonImage": {
+              "shape": [
+                2207,
+                2207,
+                3
+              ],
+              "sha256": "756cc8c620051735d2bcd92baf490138b02d29175e8fefe2bd0daba4b90bd3f4"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "111.000000",
+            "Total.Root.Length.mm": "1529.444734",
+            "Depth.mm": "93.429667",
+            "Maximum.Width.mm": "93.429667",
+            "Width-to-Depth.Ratio": "1.000000",
+            "Network.Area.mm2": "643.837422",
+            "Convex.Area.mm2": "8721.147432",
+            "Solidity": "0.073825",
+            "Lower.Root.Area.mm2": "323.259210",
+            "Average.Diameter.mm": "0.454655",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "2.839806",
+            "Perimeter.mm": "3054.327315",
+            "Volume.mm3": "279.235815",
+            "Surface.Area.mm2": "2184.567779",
+            "Holes": "39.000000",
+            "Average.Hole.Size.mm2": "0.004411",
+            "Average.Root.Orientation.deg": "44.944333",
+            "Shallow.Angle.Frequency": "0.267691",
+            "Medium.Angle.Frequency": "0.466291",
+            "Steep.Angle.Frequency": "0.266018",
+            "Root.Length.Diameter.Range.1.mm": "1525.462195",
+            "Root.Length.Diameter.Range.2.mm": "3.982539",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "685.698215",
+            "Projected.Area.Diameter.Range.2.mm2": "9.671306",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "2154.184475",
+            "Surface.Area.Diameter.Range.2.mm2": "30.383304",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "260.560868",
+            "Volume.Diameter.Range.2.mm3": "18.674947",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "5mp/whole_root/preview": {
+      "median_s": 0.25043402999654063,
+      "samples_s": [
+        0.2577650739985984,
+        0.253661809998448,
+        0.23656762199971126,
+        0.24955655299709179,
+        0.23740370500308927,
+        0.2513115069959895,
+        0.23321885499899508,
+        0.25356601699604653,
+        0.24678438100090716,
+        0.25438655899779405
+      ],
+      "startup_s": 0.13308159349980997,
+      "child_peak_mb": 115.8203125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.013327720502275042,
+        "segment": 0.04731759099740884,
+        "render": 0.04796508700019331
+      },
+      "result_bytes": 184894,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "segmentedImage": {
+              "shape": [
+                2207,
+                2207,
+                3
+              ],
+              "sha256": "5454ed9f4faa6481db20bb3023c17e1f8309345dfdc7359616c887977341b909"
+            },
+            "skeletonImage": null
+          }
+        ],
+        "csv": []
+      }
+    },
+    "5mp/whole_root/pruned": {
+      "median_s": 1.89831334399787,
+      "samples_s": [
+        1.9118320159977884,
+        1.9005600649979897,
+        1.917289734003134,
+        1.875796348998847,
+        1.9338178780017188,
+        1.8960666229977505,
+        1.8928431070016813,
+        1.8785988700037706,
+        1.9388882540006307,
+        1.865363956996589
+      ],
+      "startup_s": 0.1334543329976441,
+      "child_peak_mb": 323.75,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.013374495498283068,
+        "segment": 0.03721909950036206,
+        "skeletonize": 0.5829249630005506,
+        "prune": 0.5939034059992991,
+        "topology": 0.19438503600031254,
+        "aggregate": 0.18528657100250712,
+        "render": 0.14493717799996375
+      },
+      "result_bytes": 563887,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 161,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 28.0,
+              "totalRootLength": 1512.628378972624,
+              "depth": 93.42966666666666,
+              "maxWidth": 93.42966666666666,
+              "widthToDepthRatio": 1.0,
+              "networkArea": 643.837422,
+              "convexArea": 8721.147432222222,
+              "solidity": 0.07382485240659953,
+              "lowerRootArea": 323.2592101111111,
+              "averageDiameter": 0.45720075478260713,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 2.839806312561035,
+              "perimeter": 3054.327315418879,
+              "volume": 278.3632318123131,
+              "surfaceArea": 2172.6464259813806,
+              "holes": 39.0,
+              "averageHoleSize": 0.004411350427350427,
+              "averageRootOrientation": 44.965487017763294,
+              "shallowAngleFrequency": 0.2660768207708281,
+              "mediumAngleFrequency": 0.4689094076926494,
+              "steepAngleFrequency": 0.2650137715365225
+            },
+            "bins": {
+              "rootLength": [
+                1508.6458396128555,
+                3.9825393597685137,
+                0.0
+              ],
+              "projectedArea": [
+                681.9035305250301,
+                9.671306046776841,
+                0.0
+              ],
+              "surfaceArea": [
+                2142.263121954208,
+                30.383304027172677,
+                0.0
+              ],
+              "volume": [
+                259.68828489635706,
+                18.674946915956042,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2207,
+                2207,
+                3
+              ],
+              "sha256": "5454ed9f4faa6481db20bb3023c17e1f8309345dfdc7359616c887977341b909"
+            },
+            "skeletonImage": {
+              "shape": [
+                2207,
+                2207,
+                3
+              ],
+              "sha256": "0728a531c353d6a79b696b7c50c969e87dbc5ddc032a739b39adffc6afba7cbb"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "28.000000",
+            "Total.Root.Length.mm": "1512.628379",
+            "Depth.mm": "93.429667",
+            "Maximum.Width.mm": "93.429667",
+            "Width-to-Depth.Ratio": "1.000000",
+            "Network.Area.mm2": "643.837422",
+            "Convex.Area.mm2": "8721.147432",
+            "Solidity": "0.073825",
+            "Lower.Root.Area.mm2": "323.259210",
+            "Average.Diameter.mm": "0.457201",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "2.839806",
+            "Perimeter.mm": "3054.327315",
+            "Volume.mm3": "278.363232",
+            "Surface.Area.mm2": "2172.646426",
+            "Holes": "39.000000",
+            "Average.Hole.Size.mm2": "0.004411",
+            "Average.Root.Orientation.deg": "44.965487",
+            "Shallow.Angle.Frequency": "0.266077",
+            "Medium.Angle.Frequency": "0.468909",
+            "Steep.Angle.Frequency": "0.265014",
+            "Root.Length.Diameter.Range.1.mm": "1508.645840",
+            "Root.Length.Diameter.Range.2.mm": "3.982539",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "681.903531",
+            "Projected.Area.Diameter.Range.2.mm2": "9.671306",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "2142.263122",
+            "Surface.Area.Diameter.Range.2.mm2": "30.383304",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "259.688285",
+            "Volume.Diameter.Range.2.mm3": "18.674947",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "5mp/whole_root/rois": {
+      "median_s": 1.1570037540004705,
+      "samples_s": [
+        1.153022434002196,
+        1.1590593729997636,
+        1.1549481350011774,
+        1.1766967720031971,
+        1.1759456020008656,
+        1.1515347019958426,
+        1.1402356500038877,
+        1.1642682050005533,
+        1.1663591010001255,
+        1.1401491149954381
+      ],
+      "startup_s": 0.13537239849756588,
+      "child_peak_mb": 217.5234375,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.013489635999576421,
+        "segment": 0.03632243100219057,
+        "skeletonize": 0.47939839649916394,
+        "topology": 0.1573825309969834,
+        "aggregate": 0.19021418349802843,
+        "render": 0.13024582950674812
+      },
+      "result_bytes": 565500,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": 0,
+            "roiName": "roi-0",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 198,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 56.0,
+              "totalRootLength": 763.4207421424206,
+              "depth": 46.693666666666665,
+              "maxWidth": 93.42966666666666,
+              "widthToDepthRatio": 2.00090661831369,
+              "networkArea": 321.8040158888889,
+              "convexArea": 4065.8368503888887,
+              "solidity": 0.07914828551423775,
+              "lowerRootArea": 7.014322888888889,
+              "averageDiameter": 0.4489984915787692,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 1.778,
+              "perimeter": 1529.7181842169762,
+              "volume": 129.78127391246753,
+              "surfaceArea": 1076.858673072995,
+              "holes": 19.0,
+              "averageHoleSize": 0.004527438596491228,
+              "averageRootOrientation": 44.818627441817654,
+              "shallowAngleFrequency": 0.2684484238132563,
+              "mediumAngleFrequency": 0.4665761227607976,
+              "steepAngleFrequency": 0.26497545342594625
+            },
+            "bins": {
+              "rootLength": [
+                763.4207421424206,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                342.77476166189007,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                1076.858673072995,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                129.78127391246753,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                1103,
+                2207,
+                3
+              ],
+              "sha256": "9a78bd780a28516470e3d1a44498b99af443a70e7a055187e03b07ac41fbacfa"
+            },
+            "skeletonImage": {
+              "shape": [
+                1103,
+                2207,
+                3
+              ],
+              "sha256": "4583b307f6ef86719d151b8543380a6075fef153ec5311677b80cfb363896897"
+            }
+          },
+          {
+            "roiIndex": 1,
+            "roiName": "roi-1",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 192,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 56.0,
+              "totalRootLength": 764.5368680073595,
+              "depth": 46.736000000000004,
+              "maxWidth": 93.42966666666666,
+              "widthToDepthRatio": 1.9990942028985508,
+              "networkArea": 322.0334061111111,
+              "convexArea": 4065.991868,
+              "solidity": 0.07920168474648585,
+              "lowerRootArea": 315.3398711111111,
+              "averageDiameter": 0.45005642089252534,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 1.796051223754883,
+              "perimeter": 1529.9927277890047,
+              "volume": 131.05475294039258,
+              "surfaceArea": 1080.974048845952,
+              "holes": 20.0,
+              "averageHoleSize": 0.004301066666666666,
+              "averageRootOrientation": 44.850177063501484,
+              "shallowAngleFrequency": 0.27034280990809373,
+              "mediumAngleFrequency": 0.463930549274152,
+              "steepAngleFrequency": 0.26572664081775416
+            },
+            "bins": {
+              "rootLength": [
+                764.5368680073595,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                344.08472645581423,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                1080.974048845952,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                131.05475294039258,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                1104,
+                2207,
+                3
+              ],
+              "sha256": "e571e072822422813ff6b653b822752c79636adc091bff4b344e6a8d8467b365"
+            },
+            "skeletonImage": {
+              "shape": [
+                1104,
+                2207,
+                3
+              ],
+              "sha256": "b9b4da71cf458d35ee0b2b52fceee30903f2636df575ff00be17891e3912346a"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-0",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "56.000000",
+            "Total.Root.Length.mm": "763.420742",
+            "Depth.mm": "46.693667",
+            "Maximum.Width.mm": "93.429667",
+            "Width-to-Depth.Ratio": "2.000907",
+            "Network.Area.mm2": "321.804016",
+            "Convex.Area.mm2": "4065.836850",
+            "Solidity": "0.079148",
+            "Lower.Root.Area.mm2": "7.014323",
+            "Average.Diameter.mm": "0.448998",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "1.778000",
+            "Perimeter.mm": "1529.718184",
+            "Volume.mm3": "129.781274",
+            "Surface.Area.mm2": "1076.858673",
+            "Holes": "19.000000",
+            "Average.Hole.Size.mm2": "0.004527",
+            "Average.Root.Orientation.deg": "44.818627",
+            "Shallow.Angle.Frequency": "0.268448",
+            "Medium.Angle.Frequency": "0.466576",
+            "Steep.Angle.Frequency": "0.264975",
+            "Root.Length.Diameter.Range.1.mm": "763.420742",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "342.774762",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "1076.858673",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "129.781274",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          },
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-1",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "56.000000",
+            "Total.Root.Length.mm": "764.536868",
+            "Depth.mm": "46.736000",
+            "Maximum.Width.mm": "93.429667",
+            "Width-to-Depth.Ratio": "1.999094",
+            "Network.Area.mm2": "322.033406",
+            "Convex.Area.mm2": "4065.991868",
+            "Solidity": "0.079202",
+            "Lower.Root.Area.mm2": "315.339871",
+            "Average.Diameter.mm": "0.450056",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "1.796051",
+            "Perimeter.mm": "1529.992728",
+            "Volume.mm3": "131.054753",
+            "Surface.Area.mm2": "1080.974049",
+            "Holes": "20.000000",
+            "Average.Hole.Size.mm2": "0.004301",
+            "Average.Root.Orientation.deg": "44.850177",
+            "Shallow.Angle.Frequency": "0.270343",
+            "Medium.Angle.Frequency": "0.463931",
+            "Steep.Angle.Frequency": "0.265727",
+            "Root.Length.Diameter.Range.1.mm": "764.536868",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "344.084726",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "1080.974049",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "131.054753",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "20mp/broken_roots/plain": {
+      "median_s": 2.4664856509989477,
+      "samples_s": [
+        2.85281319799833,
+        2.492503724999551,
+        2.4564408769947477,
+        2.4765304250031477,
+        2.421133566000208,
+        2.4885919090011157,
+        2.427233446003811,
+        2.390175761000137,
+        2.4238952189989504,
+        2.5305670270026894
+      ],
+      "startup_s": 0.13264044850075152,
+      "child_peak_mb": 515.2109375,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.04479286749847233,
+        "segment": 0.13590310550353024,
+        "skeletonize": 0.9578971794981044,
+        "topology": 0.6165171814973291,
+        "aggregate": 0.13259211600234266,
+        "render": 0.44269822699789074
+      },
+      "result_bytes": 260200,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 92,
+            "metrics": {
+              "numRootTips": 78.0,
+              "numBranchPoints": 28.0,
+              "totalRootLength": 2637.908007409189,
+              "branchingFrequency": 0.01061447174099907,
+              "networkArea": 937.8941815555555,
+              "averageDiameter": 0.38870484689495927,
+              "medianDiameter": 0.42333333333333334,
+              "maxDiameter": 0.508,
+              "perimeter": 5341.084212815284,
+              "volume": 321.61371267946237,
+              "surfaceArea": 3221.287407797701
+            },
+            "bins": {
+              "rootLength": [
+                2637.908007409189,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                1025.3676281417281,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                3221.287407797701,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                321.61371267946237,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                4440,
+                4443,
+                3
+              ],
+              "sha256": "717c3e560adc89bc946ac4a19cbec7e404622ab7caf0e0db6e0db67db9e454f5"
+            },
+            "skeletonImage": {
+              "shape": [
+                4440,
+                4443,
+                3
+              ],
+              "sha256": "c73615745346e134e781ad1ae785d870f5ac9476d770b5de3eefeef7f7634f7b"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Number.of.Root.Tips": "78.000000",
+            "Number.of.Branch.Points": "28.000000",
+            "Total.Root.Length.mm": "2637.908007",
+            "Branching.frequency.per.mm": "0.010614",
+            "Network.Area.mm2": "937.894182",
+            "Average.Diameter.mm": "0.388705",
+            "Median.Diameter.mm": "0.423333",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "5341.084213",
+            "Volume.mm3": "321.613713",
+            "Surface.Area.mm2": "3221.287408",
+            "Root.Length.Diameter.Range.1.mm": "2637.908007",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "1025.367628",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "3221.287408",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "321.613713",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "20mp/broken_roots/preview": {
+      "median_s": 0.4680820909961767,
+      "samples_s": [
+        0.4774638689996209,
+        0.4702094070016756,
+        0.46847611599514494,
+        0.4635128839945537,
+        0.46768806599720847,
+        0.46101477699994575,
+        0.46899251499417005,
+        0.47026415299478685,
+        0.4633510150015354,
+        0.46385764500155346
+      ],
+      "startup_s": 0.13169734099938069,
+      "child_peak_mb": 257.81640625,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.04455308349861298,
+        "segment": 0.13327027050036122,
+        "render": 0.14995667149560177
+      },
+      "result_bytes": 116978,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "segmentedImage": {
+              "shape": [
+                4440,
+                4443,
+                3
+              ],
+              "sha256": "717c3e560adc89bc946ac4a19cbec7e404622ab7caf0e0db6e0db67db9e454f5"
+            },
+            "skeletonImage": null
+          }
+        ],
+        "csv": []
+      }
+    },
+    "20mp/broken_roots/pruned": {
+      "median_s": 3.582127395999123,
+      "samples_s": [
+        3.6377722799952608,
+        3.580717655000626,
+        3.5499716039994382,
+        3.5746731120016193,
+        3.626628434001759,
+        3.5696814749971963,
+        3.575214679003693,
+        3.602111170999706,
+        3.58353713699762,
+        3.6410108860000037
+      ],
+      "startup_s": 0.13103629400211503,
+      "child_peak_mb": 568.13671875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.044913989997439785,
+        "segment": 0.1332816520043707,
+        "skeletonize": 0.8638580785009253,
+        "prune": 1.2323437154991552,
+        "topology": 0.6052247660045396,
+        "aggregate": 0.13022398749671993,
+        "render": 0.4363320925003791
+      },
+      "result_bytes": 259599,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 14,
+            "metrics": {
+              "numRootTips": 28.0,
+              "numBranchPoints": 0.0,
+              "totalRootLength": 2628.5411088370884,
+              "branchingFrequency": 0.0,
+              "networkArea": 937.8941815555555,
+              "averageDiameter": 0.38945148751511766,
+              "medianDiameter": 0.42333333333333334,
+              "maxDiameter": 0.508,
+              "perimeter": 5341.084212815284,
+              "volume": 321.340840663085,
+              "surfaceArea": 3216.0146111153254
+            },
+            "bins": {
+              "rootLength": [
+                2628.5411088370884,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                1023.6892448298848,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                3216.0146111153254,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                321.340840663085,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                4440,
+                4443,
+                3
+              ],
+              "sha256": "717c3e560adc89bc946ac4a19cbec7e404622ab7caf0e0db6e0db67db9e454f5"
+            },
+            "skeletonImage": {
+              "shape": [
+                4440,
+                4443,
+                3
+              ],
+              "sha256": "f36c2d5dc71397d343fe9447e59afa608d91ca97e4619be50f5651ac94a74480"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Number.of.Root.Tips": "28.000000",
+            "Number.of.Branch.Points": "0.000000",
+            "Total.Root.Length.mm": "2628.541109",
+            "Branching.frequency.per.mm": "0.000000",
+            "Network.Area.mm2": "937.894182",
+            "Average.Diameter.mm": "0.389451",
+            "Median.Diameter.mm": "0.423333",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "5341.084213",
+            "Volume.mm3": "321.340841",
+            "Surface.Area.mm2": "3216.014611",
+            "Root.Length.Diameter.Range.1.mm": "2628.541109",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "1023.689245",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "3216.014611",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "321.340841",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "20mp/broken_roots/rois": {
+      "median_s": 2.1671935979975387,
+      "samples_s": [
+        2.1893606320008985,
+        2.1691573659991263,
+        2.1544592490026844,
+        2.3500917260025744,
+        2.1614531019949936,
+        2.1761122239986435,
+        2.155938674004574,
+        2.1825724329974037,
+        2.157851870993909,
+        2.165229829995951
+      ],
+      "startup_s": 0.13207702849831549,
+      "child_peak_mb": 364.125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.044647764498222386,
+        "segment": 0.12426502350353985,
+        "skeletonize": 0.7547090640000533,
+        "topology": 0.5371305600019696,
+        "aggregate": 0.13271141400036868,
+        "render": 0.4360075404983945
+      },
+      "result_bytes": 253882,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": 0,
+            "roiName": "roi-0",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 47,
+            "metrics": {
+              "numRootTips": 40.0,
+              "numBranchPoints": 14.0,
+              "totalRootLength": 1318.9640214452108,
+              "branchingFrequency": 0.010614391122405269,
+              "networkArea": 453.0349362222222,
+              "averageDiameter": 0.37677201563448326,
+              "medianDiameter": 0.33866666666666667,
+              "maxDiameter": 0.508,
+              "perimeter": 2670.302632915179,
+              "volume": 151.61734136059425,
+              "surfaceArea": 1561.2104885183537
+            },
+            "bins": {
+              "rootLength": [
+                1318.9640214452108,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                496.9487329094548,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                1561.2104885183537,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                151.61734136059425,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2133,
+                4443,
+                3
+              ],
+              "sha256": "fb56f16599e25c01cf630a3fda84395777cfe9288bc1a1bfb33f050a07f7cd42"
+            },
+            "skeletonImage": {
+              "shape": [
+                2133,
+                4443,
+                3
+              ],
+              "sha256": "d2865aad70075398ff99f3b93ef1949eaea3055a51789c489d3664161114eef5"
+            }
+          },
+          {
+            "roiIndex": 1,
+            "roiName": "roi-1",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 45,
+            "metrics": {
+              "numRootTips": 38.0,
+              "numBranchPoints": 14.0,
+              "totalRootLength": 1318.9439859609668,
+              "branchingFrequency": 0.010614552360841745,
+              "networkArea": 484.8592453333334,
+              "averageDiameter": 0.40063785942170055,
+              "medianDiameter": 0.42333333333333334,
+              "maxDiameter": 0.508,
+              "perimeter": 2670.781579900106,
+              "volume": 169.99637131869633,
+              "surfaceArea": 1660.076919280705
+            },
+            "bins": {
+              "rootLength": [
+                1318.9439859609668,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                528.4188952325499,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                1660.076919280705,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                169.99637131869633,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2136,
+                4443,
+                3
+              ],
+              "sha256": "822464b1db657417b88d266c9dbf8fe7d1a018b2850a2425287057bfdd7e6bea"
+            },
+            "skeletonImage": {
+              "shape": [
+                2136,
+                4443,
+                3
+              ],
+              "sha256": "823b76080e4a0442722d893049421ca4bf8693a10c1024b2798f0c26ec323393"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-0",
+            "Number.of.Root.Tips": "40.000000",
+            "Number.of.Branch.Points": "14.000000",
+            "Total.Root.Length.mm": "1318.964021",
+            "Branching.frequency.per.mm": "0.010614",
+            "Network.Area.mm2": "453.034936",
+            "Average.Diameter.mm": "0.376772",
+            "Median.Diameter.mm": "0.338667",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "2670.302633",
+            "Volume.mm3": "151.617341",
+            "Surface.Area.mm2": "1561.210489",
+            "Root.Length.Diameter.Range.1.mm": "1318.964021",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "496.948733",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "1561.210489",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "151.617341",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          },
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-1",
+            "Number.of.Root.Tips": "38.000000",
+            "Number.of.Branch.Points": "14.000000",
+            "Total.Root.Length.mm": "1318.943986",
+            "Branching.frequency.per.mm": "0.010615",
+            "Network.Area.mm2": "484.859245",
+            "Average.Diameter.mm": "0.400638",
+            "Median.Diameter.mm": "0.423333",
+            "Maximum.Diameter.mm": "0.508000",
+            "Perimeter.mm": "2670.781580",
+            "Volume.mm3": "169.996371",
+            "Surface.Area.mm2": "1660.076919",
+            "Root.Length.Diameter.Range.1.mm": "1318.943986",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "528.418895",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "1660.076919",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "169.996371",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "20mp/whole_root/plain": {
+      "median_s": 3.6996337569980824,
+      "samples_s": [
+        4.183815941003559,
+        4.281629534998501,
+        3.9525745160062797,
+        3.692037540000456,
+        3.7248281279971707,
+        3.64185651599837,
+        3.657464316995174,
+        3.626567848994455,
+        3.6835860650026007,
+        3.707229973995709
+      ],
+      "startup_s": 0.13140423400182044,
+      "child_peak_mb": 1118.5859375,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.045817842499673134,
+        "segment": 0.13503940500231693,
+        "skeletonize": 1.8328552794955613,
+        "topology": 0.6279766619991278,
+        "aggregate": 0.41910500949961715,
+        "render": 0.4860828764976759
+      },
+      "result_bytes": 1288076,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 398,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 110.0,
+              "totalRootLength": 3080.9806205094205,
+              "depth": 188.087,
+              "maxWidth": 188.087,
+              "widthToDepthRatio": 1.0,
+              "networkArea": 1307.2679947777779,
+              "convexArea": 35360.75006688889,
+              "solidity": 0.036969464513759785,
+              "lowerRootArea": 653.3248582222222,
+              "averageDiameter": 0.446106105365682,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 2.839806312561035,
+              "perimeter": 6264.876214286685,
+              "volume": 517.1673737136364,
+              "surfaceArea": 4317.9440067071,
+              "holes": 40.0,
+              "averageHoleSize": 0.0044802777777777775,
+              "averageRootOrientation": 44.99504683636829,
+              "shallowAngleFrequency": 0.2654206592699932,
+              "mediumAngleFrequency": 0.4698903624069366,
+              "steepAngleFrequency": 0.2646889783230702
+            },
+            "bins": {
+              "rootLength": [
+                3076.9382127755116,
+                4.042407733908974,
+                0.0
+              ],
+              "projectedArea": [
+                1364.6510957242385,
+                9.793169598434028,
+                0.0
+              ],
+              "surfaceArea": [
+                4287.177857041301,
+                30.766149665799254,
+                0.0
+              ],
+              "volume": [
+                498.2976038634963,
+                18.869769850140116,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                4443,
+                4443,
+                3
+              ],
+              "sha256": "823393933e47c37b1fe78d3e95861e025390591a1410be7f7b33af9c58e4bc06"
+            },
+            "skeletonImage": {
+              "shape": [
+                4443,
+                4443,
+                3
+              ],
+              "sha256": "9f850a3dd10c838b816948b9318f0caa530fbf1a937111bb77e7947b8845a9cf"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "110.000000",
+            "Total.Root.Length.mm": "3080.980621",
+            "Depth.mm": "188.087000",
+            "Maximum.Width.mm": "188.087000",
+            "Width-to-Depth.Ratio": "1.000000",
+            "Network.Area.mm2": "1307.267995",
+            "Convex.Area.mm2": "35360.750067",
+            "Solidity": "0.036969",
+            "Lower.Root.Area.mm2": "653.324858",
+            "Average.Diameter.mm": "0.446106",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "2.839806",
+            "Perimeter.mm": "6264.876214",
+            "Volume.mm3": "517.167374",
+            "Surface.Area.mm2": "4317.944007",
+            "Holes": "40.000000",
+            "Average.Hole.Size.mm2": "0.004480",
+            "Average.Root.Orientation.deg": "44.995047",
+            "Shallow.Angle.Frequency": "0.265421",
+            "Medium.Angle.Frequency": "0.469890",
+            "Steep.Angle.Frequency": "0.264689",
+            "Root.Length.Diameter.Range.1.mm": "3076.938213",
+            "Root.Length.Diameter.Range.2.mm": "4.042408",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "1364.651096",
+            "Projected.Area.Diameter.Range.2.mm2": "9.793170",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "4287.177857",
+            "Surface.Area.Diameter.Range.2.mm2": "30.766150",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "498.297604",
+            "Volume.Diameter.Range.2.mm3": "18.869770",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "20mp/whole_root/preview": {
+      "median_s": 0.4813281545029895,
+      "samples_s": [
+        0.4850187270058086,
+        0.4728150109949638,
+        0.4909183630006737,
+        0.48922888500237605,
+        0.489575989995501,
+        0.49074079300044104,
+        0.47763758200017037,
+        0.4737232010011212,
+        0.47445219800283667,
+        0.47718979499768466
+      ],
+      "startup_s": 0.13195315600023605,
+      "child_peak_mb": 265.58203125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.045560188496892806,
+        "segment": 0.136159667501488,
+        "render": 0.15784613550204085
+      },
+      "result_bytes": 440234,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "segmentedImage": {
+              "shape": [
+                4443,
+                4443,
+                3
+              ],
+              "sha256": "823393933e47c37b1fe78d3e95861e025390591a1410be7f7b33af9c58e4bc06"
+            },
+            "skeletonImage": null
+          }
+        ],
+        "csv": []
+      }
+    },
+    "20mp/whole_root/pruned": {
+      "median_s": 5.537752117499622,
+      "samples_s": [
+        5.531007667996164,
+        5.501328461999947,
+        5.555533787999593,
+        5.584901777001505,
+        5.539972016995307,
+        5.5135074720019475,
+        5.5295150769961765,
+        5.563165532999847,
+        5.590129354000965,
+        5.535532218003937
+      ],
+      "startup_s": 0.13367797599858022,
+      "child_peak_mb": 1118.51953125,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.046057501502218656,
+        "segment": 0.13699095050105825,
+        "skeletonize": 1.80032887800553,
+        "prune": 1.8756745605023752,
+        "topology": 0.6231491354992613,
+        "aggregate": 0.4184651629948348,
+        "render": 0.49515889400208835
+      },
+      "result_bytes": 1287375,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": -1,
+            "roiName": "Full",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 174,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 28.0,
+              "totalRootLength": 3064.2650466231394,
+              "depth": 188.087,
+              "maxWidth": 188.087,
+              "widthToDepthRatio": 1.0,
+              "networkArea": 1307.2679947777779,
+              "convexArea": 35360.75006688889,
+              "solidity": 0.036969464513759785,
+              "lowerRootArea": 653.3248582222222,
+              "averageDiameter": 0.447227755152662,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 2.839806312561035,
+              "perimeter": 6264.876214286685,
+              "volume": 516.1375610637135,
+              "surfaceArea": 4305.315158206449,
+              "holes": 40.0,
+              "averageHoleSize": 0.0044802777777777775,
+              "averageRootOrientation": 45.07130250174797,
+              "shallowAngleFrequency": 0.26359957915289006,
+              "mediumAngleFrequency": 0.4713024744339603,
+              "steepAngleFrequency": 0.26509794641314977
+            },
+            "bins": {
+              "rootLength": [
+                3060.2226388892304,
+                4.042407733908974,
+                0.0
+              ],
+              "projectedArea": [
+                1360.6312083953173,
+                9.793169598434028,
+                0.0
+              ],
+              "surfaceArea": [
+                4274.54900854065,
+                30.766149665799254,
+                0.0
+              ],
+              "volume": [
+                497.26779121357345,
+                18.869769850140116,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                4443,
+                4443,
+                3
+              ],
+              "sha256": "823393933e47c37b1fe78d3e95861e025390591a1410be7f7b33af9c58e4bc06"
+            },
+            "skeletonImage": {
+              "shape": [
+                4443,
+                4443,
+                3
+              ],
+              "sha256": "b2ae5006a8da2929391cac611733c4a7e5e1e1ededcf8934214750bcc076cc3c"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "Full",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "28.000000",
+            "Total.Root.Length.mm": "3064.265047",
+            "Depth.mm": "188.087000",
+            "Maximum.Width.mm": "188.087000",
+            "Width-to-Depth.Ratio": "1.000000",
+            "Network.Area.mm2": "1307.267995",
+            "Convex.Area.mm2": "35360.750067",
+            "Solidity": "0.036969",
+            "Lower.Root.Area.mm2": "653.324858",
+            "Average.Diameter.mm": "0.447228",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "2.839806",
+            "Perimeter.mm": "6264.876214",
+            "Volume.mm3": "516.137561",
+            "Surface.Area.mm2": "4305.315158",
+            "Holes": "40.000000",
+            "Average.Hole.Size.mm2": "0.004480",
+            "Average.Root.Orientation.deg": "45.071303",
+            "Shallow.Angle.Frequency": "0.263600",
+            "Medium.Angle.Frequency": "0.471302",
+            "Steep.Angle.Frequency": "0.265098",
+            "Root.Length.Diameter.Range.1.mm": "3060.222639",
+            "Root.Length.Diameter.Range.2.mm": "4.042408",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "1360.631208",
+            "Projected.Area.Diameter.Range.2.mm2": "9.793170",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "4274.549009",
+            "Surface.Area.Diameter.Range.2.mm2": "30.766150",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "497.267791",
+            "Volume.Diameter.Range.2.mm3": "18.869770",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    },
+    "20mp/whole_root/rois": {
+      "median_s": 3.405409746497753,
+      "samples_s": [
+        3.452776936996088,
+        3.4286267479983508,
+        3.4034797080021235,
+        3.4337914350035135,
+        3.403607161999389,
+        3.391812349000247,
+        3.429486143999384,
+        3.403116871995735,
+        3.375423511999543,
+        3.407212330996117
+      ],
+      "startup_s": 0.13186836349996156,
+      "child_peak_mb": 665.4296875,
+      "parent_peak_mb": 349.33984375,
+      "stages_s": {
+        "load": 0.04561959700367879,
+        "segment": 0.13024852450325852,
+        "skeletonize": 1.6399244940002973,
+        "topology": 0.5576787525060354,
+        "aggregate": 0.41615676500441623,
+        "render": 0.4806714614969678
+      },
+      "result_bytes": 1288761,
+      "reference": {
+        "pipelineVersion": "1.3.0",
+        "results": [
+          {
+            "roiIndex": 0,
+            "roiName": "roi-0",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 200,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 57.0,
+              "totalRootLength": 1540.6015635896824,
+              "depth": 94.02233333333334,
+              "maxWidth": 188.087,
+              "widthToDepthRatio": 2.0004502476362,
+              "networkArea": 655.1581878888888,
+              "convexArea": 16450.453658166665,
+              "solidity": 0.03982614713872295,
+              "lowerRootArea": 6.9838569999999995,
+              "averageDiameter": 0.445902407908888,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 1.778,
+              "perimeter": 3135.0401028772194,
+              "volume": 252.1201844792412,
+              "surfaceArea": 2158.1420390951243,
+              "holes": 20.0,
+              "averageHoleSize": 0.0046594888888888885,
+              "averageRootOrientation": 44.93594780880007,
+              "shallowAngleFrequency": 0.26574063227845024,
+              "mediumAngleFrequency": 0.46928303578832614,
+              "steepAngleFrequency": 0.2649763319332238
+            },
+            "bins": {
+              "rootLength": [
+                1540.6015635896824,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                686.9579468329497,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                2158.1420390951243,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                252.1201844792412,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2221,
+                4443,
+                3
+              ],
+              "sha256": "b404cb5d70432231022a88eadf1af18ece4f09f28907aab7570b54c7c52de606"
+            },
+            "skeletonImage": {
+              "shape": [
+                2221,
+                4443,
+                3
+              ],
+              "sha256": "487194cc3cc32f7e898d755ebf29fc5fbd851b0fae52f231df7f6f8c779d9a56"
+            }
+          },
+          {
+            "roiIndex": 1,
+            "roiName": "roi-1",
+            "fileName": "scan.png",
+            "thresholdValueUsed": 200,
+            "numSegments": 193,
+            "metrics": {
+              "medianNumberOfRoots": 10.0,
+              "maxNumberOfRoots": 14.0,
+              "numRootTips": 55.0,
+              "totalRootLength": 1540.7324143098851,
+              "depth": 94.06466666666667,
+              "maxWidth": 188.087,
+              "widthToDepthRatio": 1.9995499549954996,
+              "networkArea": 652.1098068888889,
+              "convexArea": 16450.816560666666,
+              "solidity": 0.03963996586333963,
+              "lowerRootArea": 645.4055192222222,
+              "averageDiameter": 0.4411682114271994,
+              "medianDiameter": 0.43171698665618896,
+              "maxDiameter": 1.796051223754883,
+              "perimeter": 3135.219707996567,
+              "volume": 246.79735618280614,
+              "surfaceArea": 2135.410155361792,
+              "holes": 20.0,
+              "averageHoleSize": 0.004301066666666666,
+              "averageRootOrientation": 44.88522706985298,
+              "shallowAngleFrequency": 0.26779999534480536,
+              "mediumAngleFrequency": 0.4687769148137172,
+              "steepAngleFrequency": 0.2634230898414776
+            },
+            "bins": {
+              "rootLength": [
+                1540.7324143098851,
+                0.0,
+                0.0
+              ],
+              "projectedArea": [
+                679.7221635089282,
+                0.0,
+                0.0
+              ],
+              "surfaceArea": [
+                2135.410155361792,
+                0.0,
+                0.0
+              ],
+              "volume": [
+                246.79735618280614,
+                0.0,
+                0.0
+              ]
+            },
+            "segmentedImage": {
+              "shape": [
+                2222,
+                4443,
+                3
+              ],
+              "sha256": "5dd1125aacaec35594fca9acfa6ef62b40510f00432a955be7c8e4bd3b924c2c"
+            },
+            "skeletonImage": {
+              "shape": [
+                2222,
+                4443,
+                3
+              ],
+              "sha256": "9d2d8dbf4ab6528c2234dbb425a03ad3c4911561937d78fc695dd105619d4868"
+            }
+          }
+        ],
+        "csv": [
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-0",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "57.000000",
+            "Total.Root.Length.mm": "1540.601564",
+            "Depth.mm": "94.022333",
+            "Maximum.Width.mm": "188.087000",
+            "Width-to-Depth.Ratio": "2.000450",
+            "Network.Area.mm2": "655.158188",
+            "Convex.Area.mm2": "16450.453658",
+            "Solidity": "0.039826",
+            "Lower.Root.Area.mm2": "6.983857",
+            "Average.Diameter.mm": "0.445902",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "1.778000",
+            "Perimeter.mm": "3135.040103",
+            "Volume.mm3": "252.120184",
+            "Surface.Area.mm2": "2158.142039",
+            "Holes": "20.000000",
+            "Average.Hole.Size.mm2": "0.004659",
+            "Average.Root.Orientation.deg": "44.935948",
+            "Shallow.Angle.Frequency": "0.265741",
+            "Medium.Angle.Frequency": "0.469283",
+            "Steep.Angle.Frequency": "0.264976",
+            "Root.Length.Diameter.Range.1.mm": "1540.601564",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "686.957947",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "2158.142039",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "252.120184",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          },
+          {
+            "File.Name": "scan.png",
+            "Region.of.Interest": "roi-1",
+            "Median.Number.of.Roots": "10.000000",
+            "Maximum.Number.of.Roots": "14.000000",
+            "Number.of.Root.Tips": "55.000000",
+            "Total.Root.Length.mm": "1540.732414",
+            "Depth.mm": "94.064667",
+            "Maximum.Width.mm": "188.087000",
+            "Width-to-Depth.Ratio": "1.999550",
+            "Network.Area.mm2": "652.109807",
+            "Convex.Area.mm2": "16450.816561",
+            "Solidity": "0.039640",
+            "Lower.Root.Area.mm2": "645.405519",
+            "Average.Diameter.mm": "0.441168",
+            "Median.Diameter.mm": "0.431717",
+            "Maximum.Diameter.mm": "1.796051",
+            "Perimeter.mm": "3135.219708",
+            "Volume.mm3": "246.797356",
+            "Surface.Area.mm2": "2135.410155",
+            "Holes": "20.000000",
+            "Average.Hole.Size.mm2": "0.004301",
+            "Average.Root.Orientation.deg": "44.885227",
+            "Shallow.Angle.Frequency": "0.267800",
+            "Medium.Angle.Frequency": "0.468777",
+            "Steep.Angle.Frequency": "0.263423",
+            "Root.Length.Diameter.Range.1.mm": "1540.732414",
+            "Root.Length.Diameter.Range.2.mm": "0.000000",
+            "Root.Length.Diameter.Range.3.mm": "0.000000",
+            "Projected.Area.Diameter.Range.1.mm2": "679.722164",
+            "Projected.Area.Diameter.Range.2.mm2": "0.000000",
+            "Projected.Area.Diameter.Range.3.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.1.mm2": "2135.410155",
+            "Surface.Area.Diameter.Range.2.mm2": "0.000000",
+            "Surface.Area.Diameter.Range.3.mm2": "0.000000",
+            "Volume.Diameter.Range.1.mm3": "246.797356",
+            "Volume.Diameter.Range.2.mm3": "0.000000",
+            "Volume.Diameter.Range.3.mm3": "0.000000"
+          }
+        ]
+      }
+    }
+  }
+}
