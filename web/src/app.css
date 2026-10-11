@@ -5,9 +5,8 @@
 @import "@fontsource-variable/martian-mono/wght.css";
 
 /*
-  One theme, and only one. `corporate` is daisyUI's flattest light theme —
-  square-ish corners, no depth, restrained colour — which is what a tool that
-  reads like the desktop one it replaces wants.
+  `corporate` supplies the flat controls for both themes. The dark palette
+  changes the surfaces and contrast while keeping the lab-tool typography.
 
   The rule the theme has to respect: viridis is the only saturated colour that
   means anything on the page, and it always means a diameter class. 5.1 step 13
@@ -17,6 +16,19 @@
 */
 @plugin "daisyui" {
   themes: corporate --default;
+}
+
+/* Neutral surfaces keep the scan and its diameter colours in focus. */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-base-100: #20252b;
+  --color-base-200: #181d22;
+  --color-base-300: #38414b;
+  --color-base-content: #e5eaf0;
+  --color-primary: #82bce4;
+  --color-primary-content: #181d22;
+  --color-neutral: #38414b;
+  --color-neutral-content: #e5eaf0;
 }
 
 @theme {

@@ -61,7 +61,7 @@ describe("rectFrom", () => {
     expect(up).toEqual(down);
   });
 
-  test("integer pixels, because the worker crops with them", () => {
+  test("integer pixels, because the pipeline crops with them", () => {
     const roi = rectFrom({ x: 10.4, y: 20.6 }, { x: 110.5, y: 220.5 }, natural);
     for (const value of Object.values(roi)) expect(Number.isInteger(value)).toBe(true);
   });

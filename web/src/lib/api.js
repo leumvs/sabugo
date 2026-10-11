@@ -1,6 +1,4 @@
-/** `dpi`, `params` and `rois` go in **before** `image`: the route reads the
- *  body part by part, so a file sent first is read in full before anything
- *  can refuse it. Throws the error envelope. */
+/** Submit one image and its calibrated analysis options. Throws the error envelope. */
 export async function submit({ file, dpi, params, rois, preview = false }) {
   const body = new FormData();
   body.append("dpi", String(dpi));

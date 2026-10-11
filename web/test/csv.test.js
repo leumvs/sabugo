@@ -1,8 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { columns, rowFor, toCsv } from "../src/lib/csv.js";
 
-// The same header `apps/worker/tests/test_export.py` asserts on the other side,
-// spelled out rather than derived.
 const BROKEN_ROOT_HEADER =
   "File.Name,Region.of.Interest,Number.of.Root.Tips,Number.of.Branch.Points," +
   "Total.Root.Length.mm,Branching.frequency.per.mm,Network.Area.mm2," +
@@ -80,7 +78,7 @@ function rows(overrides = {}) {
 }
 
 describe("the column contract", () => {
-  test("broken roots is the header the worker writes", () => {
+  test("broken roots is the header the pipeline writes", () => {
     expect(columns([2.0, 5.0], "broken_roots").join(",")).toBe(BROKEN_ROOT_HEADER);
   });
 
@@ -112,7 +110,7 @@ describe("the rows", () => {
     expect(cells[index]).toBe("2.261000");
   });
 
-  test("six decimals, which is what the worker emits", () => {
+  test("six decimals, which is what the pipeline emits", () => {
     const cells = toCsv(rows()).trim().split("\n")[1].split(",");
     expect(cells[2]).toBe("12.000000");
     expect(cells[4]).toBe("412.700000");

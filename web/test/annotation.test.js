@@ -1,8 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { format, HEADER, parse } from "../src/lib/annotation.js";
 
-// Spelled out and not imported: `apps/worker/src/sabugo_worker/cli.py` and
-// `apps/api/src/services/runner.ts` carry the same string.
 const LITERAL = "#ROI Name, Class Name, X Position, Y Position, Width, Height";
 
 const FILE = `${LITERAL}
@@ -37,7 +35,7 @@ describe("the RVE annotation format", () => {
     expect(() => parse(LITERAL)).toThrow("annotation_is_empty");
   });
 
-  test("carries the class name the worker ignores", () => {
+  test("carries the class name the pipeline ignores", () => {
     const [roi] = parse("a, taproot, 1, 2, 3, 4\n");
     expect(roi.class).toBe("taproot");
     expect(format([roi])).toContain("a, taproot, 1, 2, 3, 4");

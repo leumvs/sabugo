@@ -1,5 +1,4 @@
 <script>
-import logo from "../assets/sabugo.svg";
 import { format, parse } from "../lib/annotation.js";
 import { download } from "../lib/api.js";
 import { toCsv } from "../lib/csv.js";
@@ -21,6 +20,18 @@ let imagePicker = $state(null);
 let annotationPicker = $state(null);
 let settingsPicker = $state(null);
 let about = $state(null);
+let darkMode = $state(document.documentElement.dataset.theme !== "corporate");
+
+function toggleTheme() {
+  darkMode = !darkMode;
+  const theme = darkMode ? "dark" : "corporate";
+  document.documentElement.dataset.theme = theme;
+  try {
+    localStorage.setItem("sabugo.theme", theme);
+  } catch {
+    // Theme switching still works when browser storage is unavailable.
+  }
+}
 
 const stem = $derived(
   (session.file?.name ?? "sabugo").replace(/\.[^.]+$/, "").replace(/^/, "sabugo-"),
@@ -95,10 +106,10 @@ function saveFeatures() {
 
 <nav
   bind:this={bar}
-  class="flex shrink-0 items-center gap-1 border-base-300 border-b bg-base-100 px-2 py-1"
+  class="flex shrink-0 flex-wrap items-center gap-1 border-base-300 border-b bg-base-100 px-2 py-1"
   aria-label="menu"
 >
-  <img src={logo} alt="" class="mr-1 size-5" />
+  <img src="/favicon.svg" alt="" class="mr-1 size-5" />
   <span class="plate mr-2 font-bold text-[0.8125rem]">Sabugo</span>
 
   <details class="dropdown" name="menubar">
@@ -178,6 +189,23 @@ function saveFeatures() {
       </button>
     {/each}
   </div>
+  <button
+    type="button"
+    class="btn btn-ghost btn-xs btn-square mx-1 shrink-0"
+    aria-label={t("darkMode")}
+    title={t("darkMode")}
+    aria-pressed={darkMode}
+    onclick={toggleTheme}
+  >
+    <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      {#if darkMode}
+        <path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z" />
+      {:else}
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+      {/if}
+    </svg>
+  </button>
 </nav>
 
 <input

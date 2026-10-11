@@ -1,6 +1,5 @@
 <script>
 import { tick } from "svelte";
-import logo from "../assets/sabugo.svg";
 import { t } from "../lib/i18n.svelte.js";
 import { classLabels } from "../lib/metrics.js";
 import { rectFrom, toImagePoint, toPercent } from "../lib/roi.js";
@@ -299,7 +298,7 @@ function endPan() {
         class:border-base-content={dragging}
         class:border-base-300={!dragging}
       >
-        <img src={logo} alt="Sabugo" class="mb-1 size-24" />
+        <img src="/favicon.svg" alt="Sabugo" class="mb-1 size-24" />
         <span class="text-lg">{t("dropHere")}</span>
         <span class="text-[0.8125rem] text-base-content/55">{t("dropHint")}</span>
         <input

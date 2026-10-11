@@ -1,9 +1,4 @@
-/**
- * The ROI annotation format of the reference tool, so a file made in either
- * tool opens in the other. Two other copies exist — `read_annotations` in
- * `apps/worker/src/sabugo_worker/cli.py` and `annotationCsv` in
- * `apps/api/src/services/runner.ts` — and each side asserts the literal header.
- */
+/** ROI annotations exchanged with the reference tool. */
 
 export const HEADER = "#ROI Name, Class Name, X Position, Y Position, Width, Height";
 

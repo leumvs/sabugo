@@ -4,9 +4,6 @@ import ramp from "../lib/viridis.json";
 
 let { values, labels, unit } = $props();
 
-// The same ramp `render.class_colours` paints the skeleton with, so a bar and
-// the roots it counts are the same colour. `apps/worker/tests/test_viridis_table.py`
-// keeps the two in step.
 const colours = $derived(ramp[String(values.length)] ?? []);
 const largest = $derived(Math.max(...values, 0));
 
