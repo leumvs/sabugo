@@ -17,3 +17,8 @@ sabugo.svg
 
 coverage
 *.log
+
+**/.venv
+**/__pycache__
+**/.pytest_cache
+api/validation/data

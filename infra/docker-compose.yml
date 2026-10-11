@@ -6,18 +6,19 @@ services:
     env_file:
       - ../.env
     environment:
-      NODE_ENV: production
-      WEB_DIST: /app/apps/web/dist
-      PYTHON_BIN: /opt/venv/bin/python
-      WORKER_CWD: /app/apps/worker
+      FASTAPI_ENV: production
+      WEB_DIST: /app/web/dist
+      OPENCV_FOR_THREADS_NUM: "2"
+    cpus: 2
+    mem_limit: 4g
     ports:
       - "${PORT}:${PORT}"
     healthcheck:
       test:
         - CMD
-        - bun
-        - -e
-        - 'if (!(await fetch(`http://127.0.0.1:$${process.env.PORT}/api/health`)).ok) process.exit(1)'
+        - .venv/bin/python
+        - -c
+        - "import os, urllib.request; urllib.request.urlopen('http://127.0.0.1:' + os.environ.get('PORT', '3000') + '/api/health', timeout=5)"
       interval: 10s
       timeout: 5s
       retries: 5

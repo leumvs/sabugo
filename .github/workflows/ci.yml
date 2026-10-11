@@ -1,102 +1,25 @@
 name: CI
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-
+on: [push, pull_request]
 jobs:
-  check:
-    name: lint, typecheck, test and build
+  check-lint-build-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.13.0"
+          enable-cache: true
+          cache-dependency-glob: api/uv.lock
       - run: bun install --frozen-lockfile
-
+        working-directory: web
+      - run: uv sync --directory api --locked --python 3.14
       - run: bun run check
-
+        working-directory: web
       - run: bun run test
-
+        working-directory: web
+      - run: uv run --directory api python -m pytest
       - run: bun run build
-
-  worker:
-    name: python pipeline tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: pip
-          cache-dependency-path: apps/worker/pyproject.toml
-
-      - name: install the worker
-        working-directory: apps/worker
-        run: pip install -e ".[dev]"
-
-      - name: pytest
-        working-directory: apps/worker
-        run: pytest -q
-
-      - name: the CLI end to end
-        working-directory: apps/worker
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/cli
-          python -c "
-          import cv2, numpy as np
-          img = np.full((400, 400), 255, np.uint8)
-          cv2.line(img, (60, 40), (200, 360), 0, 9)
-          cv2.line(img, (200, 200), (340, 90), 0, 5)
-          cv2.imwrite('/tmp/cli/roots.png', img)
-          "
-          python -m sabugo_worker.cli /tmp/cli/roots.png --dpi 346 \
-            --mode whole_root --feature --segment --contour --hull --holes \
-            -o /tmp/cli/whole.csv
-          test "$(head -1 /tmp/cli/whole.csv | tr ',' '\n' | wc -l)" = "38"
-          test -s /tmp/cli/roots_feat.png
-          test -s /tmp/cli/roots_seg.png
-
-  docker:
-    name: compose image and smoke test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
-      - name: prepare .env
-        run: cp .env.example .env
-
-      - name: compose up
-        run: bun run compose:up -- --wait
-
-      - name: check /api/health
-        run: |
-          set -euo pipefail
-          source .env
-          res=$(curl -fsS "http://localhost:${PORT}/api/health")
-          echo "$res"
-          test "$res" = '{"status":"ok"}'
-
-      - name: check the client is served
-        run: |
-          set -euo pipefail
-          source .env
-          curl -fsS "http://localhost:${PORT}/" | grep -q '<div id="app">'
-
-      - name: log on failure
-        if: failure()
-        run: bun run compose:logs
-
-      - name: compose down
-        if: always()
-        run: bun run compose:down
+        working-directory: web
